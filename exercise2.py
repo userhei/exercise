@@ -9,55 +9,68 @@
 '''
 
 class Restaurant:
-
   def __init__(self,restaurant_name,cuisine_type,number_served = 0):
     self.__restaurant_name = restaurant_name
     self.__cuisine_type = cuisine_type
     self.__number_served = number_served
 
+
   def get_restaurant_name(self):
     return self.__restaurant_name
  
+
   def set_restaurant_name(self,restaurant_name):
     self.__restaurant_name = restaurant_name
+
 
   def get_cuisine_type(self):
     return self.__cuisine_type
 
+
   def set_cuisine_type(self,cuisine_type):
     self.__cuisine_type = cuisine_type
  
+
   def get_number_served(self):
     return self.__number_served
  
+
   def set_number_served(self,number_served):
     self.__number_served = number_served
 
+
   def describe_restaurant(self):
-    print('Restaurant Name:{self.get_restaurant_name()}')
-    print(f'Cuisine Type: {self.get_cuisine_type()}\n')
+    print(f'Restaurant Name:{self.get_restaurant_name()}')
+    print(f'Cuisine Type:{self.get_cuisine_type()}\n')
+
 
   def open_restaurant(self):
     print(f'{self.get_restaurant_name().title()} is opening.')
+
 
   def increment_number_served(self,number_served):
     self.__number_served += number_served
     return self.__number_served
 
+
   def print_number_served(self):
     print(f'Today,the number of people served in restaurant is {self.__number_served}')
 
+
+
 class IceCreamStand(Restaurant):
- 
   def __init__(self,restaurant_name,cuisine_type,flavors = ['Chocolate','Vanilla','Strawberry']):
     super().__init__(restaurant_name,cuisine_type)
     self.__flavors = flavors
 
+
   def get_flavors(self):
     return self.__flavors
   
+
   def set_flavors(self,flavors):
     self.__flavors = flavors   
+
 
   def print_flavors(self):
     flavors_str = ""
@@ -65,6 +78,7 @@ class IceCreamStand(Restaurant):
       flavors_str += value + ','
     flavors_str = flavors_str.strip(',')    
     print(f'The flavors of ice cream are {flavors_str}')
+
 
 
 def main():
