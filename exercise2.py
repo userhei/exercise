@@ -10,7 +10,7 @@
 
 class Restaurant:
   def __init__(self,restaurant_name,cuisine_type,number_served = 0):
-    self.__restaurant_name = restaurant_name
+    self.__restaurant_name = restaurant_name  #为什么要用“__”在属性前面？
     self.__cuisine_type = cuisine_type
     self.__number_served = number_served
 
